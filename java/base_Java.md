@@ -42,7 +42,7 @@ final不可以被继承
 
 
 ## object
-object是java里面的超类所有类都会继承他
+object是java里面的超类所有类都会继承
 # 异常(Exception)
 
 ### 异常的类型
