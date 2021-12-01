@@ -1,5 +1,5 @@
 
-# Mybatis
+# 3Mybatis
 
 ## 1.简介
 
@@ -355,6 +355,7 @@ SqlSession sqlSession = MybitisUtils.getSqlSession();
   <package name="domain.blog"/>
 </typeAliases>
 ```
+typeAliases 中设置了一个 package 的别名扫描路径，在该路径下的 Java 实体类都可以拥有一个别名（即首字母小写的类名）
 
 #### 3.注解
 
@@ -427,6 +428,7 @@ environments 元素定义了如何配置环境。
 - 数据源的配置（比如：type="POOLED"）
   - **UNPOOLED**– 这个数据源的实现会每次请求时打开和关闭连接
   - **POOLED**– 这种数据源的实现利用“池”的概念将 JDBC 连接对象 不用每次打开关闭连接
+  	- 常见的数据库连接池：JNDI、 C3p0、 Apache 的Jakarta DBCP、BoneCP
 
 ### 5.mappers(映射器)
 
@@ -502,7 +504,11 @@ environments 元素定义了如何配置环境。
         where id = #{tid};
     </select>
 ```
+### 3.注意点
 
+####  association是用于一对一和多对一
+
+####  collection是用于一对多的关系
 
 
 
